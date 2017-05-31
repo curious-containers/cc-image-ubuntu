@@ -3,8 +3,8 @@
 REGISTRY_URL=docker.io/curiouscontainers/cc-image-ubuntu
 TAG=0.11
 
-docker pull docker.io/ubuntu:xenial
 docker pull ${REGISTRY_URL}
+docker pull docker.io/ubuntu:xenial
 docker build --no-cache=true -t ${REGISTRY_URL} .
 docker push ${REGISTRY_URL}
 
